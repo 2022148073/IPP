@@ -1,8 +1,9 @@
 body {
   position: relative;
+  /* position: absolute; */
   background-image: url(image/emgbg.png);
   max-width: 400px;
-  /* margin: auto; */
+  margin: auto;
   /* width: 100vmax; */
   width: 100%;
   left: calc(calc(100vw - 100vmax) / 2);
@@ -78,4 +79,16 @@ textarea {
 #map {
   width: 320px;
   height: 320px;
+}
+
+@media screen and (max-width: 600px) {
+  body {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    background-image: url(image/emgbg.png);
+    width: 100%;
+    z-index: -1;
+    margin: 0px;
+  }
 }
