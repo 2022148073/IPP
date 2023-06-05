@@ -2,7 +2,7 @@ body {
   position: relative;
   background-image: url(image/emgbg.png);
   max-width: 400px;
-  margin: auto;
+  /* margin: auto; */
   /* width: 100vmax; */
   width: 100%;
   left: calc(calc(100vw - 100vmax) / 2);
