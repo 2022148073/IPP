@@ -3,8 +3,8 @@ body {
   background-image: url(image/emgbg.png);
   max-width: 400px;
   margin: auto;
-  width: 100vmax;
-  /* width: 100%; */
+  /* width: 100vmax; */
+  width: 100%;
   left: calc(calc(100vw - 100vmax) / 2);
   z-index: -1;
 }
@@ -28,7 +28,7 @@ img#background {
   box-shadow: 0 0px 30px #ffffff;
   text-align: center;
   background: #ffffffee;
-  margin-bottom : 50px;
+  margin-bottom: 50px;
 }
 
 .Emergency_main div {
@@ -76,6 +76,6 @@ textarea {
 }
 
 #map {
-  width : 320px;
-  height : 320px;
+  width: 320px;
+  height: 320px;
 }
