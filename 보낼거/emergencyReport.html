@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>후속신고</title>
+    <link rel="stylesheet" href="./emergencyReport.css" type="text/css" />
+    <script type="text/javascript" src="emergency.js"></script>
+    <srcipt type="text/javascript" src="camera.js"></srcipt>
+  </head>
+
+  <body>
+    <br />
+    <br />
+    <div class="Emergency_main">
+      <button onclick="document.location = './quickReport.html'">
+        <img src="image/back.png" alt="뒤로가기" />
+      </button>
+      <h1>🚨 Emergency 🚨</h1>
+      <div>
+        환자분의 소중한 생명을 지키기 위한 과정입니다. 최대한 자세하게
+        적어주세요! <br />
+        주의! 허위 신고 시 법적 처벌을 받으실 수 있습니다!
+      </div>
+      <form>
+        <h2>신고자 정보</h2>
+        <div>
+          <label for="name">신고자 이름 :</label>
+          <input id="name" type="text" placeholder="이름 입력" />
+        </div>
+        <div>
+          <label for="phone">신고자 연락처 :</label>
+          <input
+            id="phone"
+            type="tel"
+            pattern="[0-9]{11}"
+            placeholder="010 1234 5678 ( - 없이)"
+          />
+        </div>
+        <h2>상세 설명</h2>
+        <div>
+          <label for="description">상세 설명 :</label>
+          <p><textarea id="description" rows="6"></textarea></p>
+        </div>
+        <div>
+          <label for="age"> 환자의 나이 : </label>
+          <input id="age" type="number" min="0" max="150" step="1" />
+        </div>
+        <div>
+          <label for="gender">환자의 성별 : </label>
+          <select id="gender">
+            <option selected>남성</option>
+            <option>여성</option>
+          </select>
+        </div>
+        <div>
+          <label for="takepic">사진 촬영</label>
+          <input type="file" id="takepic" accept="image/*" />
+        </div>
+        <div>
+          <button onClick="concreteRep();return false;">신고</button>
+        </div>
+      </form>
+    </div>
+    <div class="Emergency_main">
+      <img src="about:blank" alt="" id="showpic" />
+    </div>
+    <br />
+    <br />
+  </body>
+</html>
