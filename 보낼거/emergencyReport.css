@@ -32,6 +32,11 @@ img#background {
   margin-bottom: 50px;
 }
 
+.Emergency_main #showpic {
+  width: 320px;
+  height: 320px;
+}
+
 .Emergency_main div {
   margin-top: 10px;
   text-align: left;
