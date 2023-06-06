@@ -1,13 +1,22 @@
 body {
+  /*
   position: relative;
-  /* position: absolute; */
+  /* position: absolute;
   background-image: url(image/emgbg.png);
   max-width: 400px;
   margin: auto;
-  /* width: 100vmax; */
+  /* width: 100vmax; 
   width: 100%;
   left: calc(calc(100vw - 100vmax) / 2);
   z-index: -1;
+  */
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url(image/emgbg.png);
+  flex-direction: column;
+  width: 100%;
 }
 
 .footer {
@@ -30,6 +39,7 @@ img#background {
   text-align: center;
   background: #ffffffee;
   margin-bottom: 50px;
+  width: 400px;
 }
 
 .Emergency_main #showpic {
