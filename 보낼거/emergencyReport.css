@@ -96,14 +96,13 @@ textarea {
   height: 320px;
 }
 
-@media (max-width: 480px) {
+/* @media (max-width: 480px) {
   body {
     position: absolute;
     left: 0px;
     top: 0px;
     background-image: url(image/emgbg.png);
     width: 100%;
-    z-index: -1;
     margin: 0px;
   }
-}
+} */
