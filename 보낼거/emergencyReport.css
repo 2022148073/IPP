@@ -86,7 +86,7 @@ textarea {
   height: 320px;
 }
 
-@media screen and (max-width: 600px) {
+@media (max-width: 480px) {
   body {
     position: absolute;
     left: 0px;
