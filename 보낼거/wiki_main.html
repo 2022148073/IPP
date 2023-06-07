@@ -12,24 +12,75 @@
   </head>
   <body>
     <div class="header">
-      <div class="logo">
-        <img src="image\logo.png" alt="logo" type="image/png" />
-        <a href="index.html">질병 정보</a>
+      <div class="head">
+        <div class="logo">
+          <img src="/image/logo.png" alt="logo" type="image/png" />
+          <a href="/">질병 정보</a>
+        </div>
+        <span id="category">
+          <i class="fa-solid fa-bars" onclick="divBtn"></i>
+        </span>
       </div>
-      <span id="category">
-        <img src="image\category.png" type="image/png" color="white" />
-      </span>
-      <!-- <div class="navbar">
-        <a href="/">홈</a>
-      </div> -->
+      <ul class="menu">
+        <li>
+          <a href="#" id="category_1">뇌신경</a>
+          <!-- <ul class="submenu">
+            <li><a href="#">sbm1</a></li>
+            <li><a href="#">sbm2</a></li>
+            <li><a href="#">sbm3</a></li>
+          </ul> -->
+        </li>
+        <li>
+          <a href="#" id="category_2">정신건강</a>
+        </li>
+        <li>
+          <a href="#" id="category_3">눈</a>
+        </li>
+        <li>
+          <a href="#" id="category_4">귀코목</a>
+        </li>
+        <li>
+          <a href="#" id="category_5">구강</a>
+        </li>
+        <li>
+          <a href="#" id="category_6">뼈근육</a>
+        </li>
+        <li>
+          <a href="#" id="category_7">피부</a>
+        </li>
+        <li>
+          <a href="#" id="category_8">내분비</a>
+        </li>
+        <li>
+          <a href="#" id="category_9">호흡기</a>
+        </li>
+        <li>
+          <a href="#" id="category_10">순환기</a>
+        </li>
+        <li>
+          <a href="#" id="category_11">소화기</a>
+        </li>
+        <li>
+          <a href="#" id="category_12">면역</a>
+        </li>
+        <li>
+          <a href="#" id="category_13">비뇨기</a>
+        </li>
+        <li>
+          <a href="#" id="category_14">생식기</a>
+        </li>
+        <li>
+          <a href="#" id="category_15">응급상황</a>
+        </li>
+      </ul>
     </div>
 
     <div class="main">
       <div class="search">
-        <img src="image\search.png" alt="search" type="image/png" />
+        <i class="fa-solid fa-magnifying-glass"></i>
         <input id="search" tupe="text" placeholder="검색어를 입력해주세요." />
         <button id="name_search_button">
-          <img src="image\search_button.png" alt="search button" />
+          <i class="fa-regular fa-paper-plane"></i>
         </button>
         <div class="ranking">
           <strong>이달의 검색어 :</strong>
@@ -41,119 +92,62 @@
           <a href="/">#아하메드</a>
         </div>
       </div>
-      <div class="list">
-        <!-- <div class="leftAlign">
-          <h1>개요: 노인 어지럼증</h1>
-          <hr />
-          <br />
-          <div class="detailImage">
-            <img src="image\노인_어지럼증.PNG" alt="노인 어지럼증" />
-          </div>
-          <p>
-            어지럼증은 인구 10명 중 1명이 겪고 있을 정도로 흔한 증상이며, 75세
-            이상의 노인들이 가장 흔하게 호소하는 증상 가운데 하나입니다. 그러나
-            어지럼증의 양상이나 원인 질환이 매우 다양하여 진단이나 치료가 어려운
-            경우가 많습니다.<br /><br />
-            평상시 우리 몸의 균형은 몸을 구성하는 여러 기관의 협동에 의해
-            유지됩니다. 귀(내이), 눈, 팔과 다리의 근육에서 느끼는 몸의 균형
-            정보가 뇌에 전달되면 뇌에서 이를 통합하여 평형을 유지하고 몸의
-            운동을 조절합니다. 따라서 이 균형 정보들 사이에 혼란이 생기면
-            어지럼증이 발생합니다.<br /><br />이러한 어지럼증을 일으키는
-            대표적인 질환으로는 귀 질환(말초성)과 뇌질환(중추성)이 있으며, 그 외
-            심장 질환, 안과 질환 등이 있어도 다양한 양상의 어지럼증이 유발될 수
-            있습니다. 특히 뇌질환에 의해 발생한 어지럼증의 경우 뇌졸중의 초기
-            증상일 수 있으며 노인 어지럼증의 경우 낙상, 골절 등으로 이어질 수
-            있으므로 어지럼증을 호소하는 경우 신속한 진단과 치료가
-            필요합니다.<br /><br />어지럼증은 환자에 따라 다양한 양상으로
-            표현됩니다. ‘천장이 빙글빙글 도는 것 같다’, ‘몸이 휘청휘청한다’고
-            표현하기도 하며, ‘메슥메슥하다’, ‘눈앞이 깜깜하다’는 증상을 호소하는
-            경우도 있습니다. 이처럼 원인 질환에 따라 어지럼증의 양상은 다양하게
-            나타날 수 있으므로 자세한 병력 청취와 신체검사를 통해 원인 질환을
-            감별하는 것이 매우 중요합니다.<br /><br />어지럼증은 환자가 호소하는
-            증상의 특성에 따라 크게 4가지로 분류할 수 있습니다.<br /><br />
-            1. 현훈 <br /><br />현훈은 대부분 갑자기 자기 자신 혹은 세상이 빙빙
-            회전하거나 땅이 위아래로 움직인다고 표현합니다. 현훈은 몸의 균형을
-            유지하는 기관 중 내이(달팽이관과 세반고리관)에 이상이 있을 때
-            나타나는 경우가 많습니다. 대표적인 내이 질환에는 양성 발작성 체위성
-            현훈, 메니에르병, 전정신경염 등이 있습니다. <br /><br />1) 양성
-            발작성 체위성 현훈 <br /><br />갑자기 고개를 돌리거나 자리에서
-            일어날 때 세상이 빙빙 도는 듯한 어지럼증(현훈)이 발생합니다. 60세
-            이상의 고령, 여자에서 더 호발하며, 어지럼증 발생 시 메스꺼움, 구토,
-            체한 느낌 등이 동반될 수 있습니다. 신체검사에서 눈동자의 비정상적
-            움직임(안구진탕)이 흔하게 나타나며, 보통 가만히 안정을 취하면 수
-            초에서 수 분 이내에 증상이 호전됩니다.<br /><br />2) 메니에르병
-            <br /><br />반복적인 현훈을 유발하는 메니에르병은 어지럼증과 함께
-            점진적인 청력 감소, 이명 등이 특징적으로 동반되는 경우가 많습니다.
-            이 병은 내이 속 림프액의 압력 증가로 인해 발생하며, 귀에 무엇이
-            차있는 느낌이 발생한 후 귀가 잘 안 들리면서 소리가 나는 증상(이명)을
-            호소합니다. 보통 수 시간 이상 증상이 지속되는 경우가 많습니다.
-            <br /><br />3) 전정신경염 <br /><br />전정신경염은 흔히 상기도
-            감염과 동반하여 발생하며, 내이의 전정기관에 바이러스 감염 등으로
-            인해 염증이 생기는 병입니다. 발병 전에 감기 등 호흡기 감염을 앓았던
-            과거력이 있는 경우가 흔하므로 자세한 병력 청취가 중요합니다. 청력
-            감소는 동반되지 않으며, 증상은 수 분 정도 지속됩니다.
-            <br /><br />현훈의 경우 이처럼 내이 질환이 원인이 되는 경우가
-            많으나, 증상이 오랫동안 지속되거나 신경학적 이상(손발을 움직이는
-            것이 힘들고 힘이 빠짐, 말하는 것이 어눌해짐, 물체가 겹쳐서 보이거나
-            나누어져서 보임 등)이 동반되는 경우 뇌질환이 원인일 수 있으므로
-            전산화단층촬영(CT), 자기공명영상(MRI) 등의 추가적인 검사가
-            필요합니다.<br /><br />2. 실신성 어지럼증<br /><br />실신성
-            어지럼증은 정신을 잃을 것 같은 느낌, 아득해지는 느낌을 주로
-            호소합니다. 뇌졸중 등에 의해 뇌로 가는 혈류가 부족해서 발생하는
-            증상일 수 있으므로 먼저 뇌혈관질환에 대한 신속한 검사가 시행되어야
-            합니다. 그 외 빈혈, 저혈당, 기립성 저혈압(갑자기 기립하는 경우
-            혈압이 낮아지는 상태로 자율신경의 이상이나 약물의 부작용으로 인해
-            나타남), 부정맥, 심부전 등이 원인이 되는 경우도 많으므로 혈액 검사,
-            심전도, 심초음파 등 원인 질환에 대한 검사가 필요합니다.<br /><br />3.
-            균형장애로 인한 어지럼증<br /><br />어지럼증은 균형 장애에 의해
-            일어날 수 있으며, 누워 있거나 앉아 있을 때는 괜찮지만 서 있거나 걸을
-            때는 중심을 잡지 못하고 쓰러지는 증상을 호소합니다. 몸의 균형과
-            보행을 담당하는 소뇌의 이상이 원인인 경우가 많으므로 서서 걷기
-            시작할 때 균형 장애를 보이면서 어지럼증을 호소하는 경우 신경학적
-            검사 및 뇌 영상 검사를 시행해야 합니다.<br /><br />4. 심인성
-            어지럼증(기타 어지럼증)<br /><br />그 외에 어지럼증은 심인성 또는
-            애매모호한 어지럼증으로, 대개는 몸이 붕 뜬 느낌, 넘어질 것 같은
-            느낌, 머리 안이 도는 느낌 등 비특이적인 어지럼증을 호소합니다.
-            공황장애, 불안장애, 우울증, 신체형장애 등의 심리 정신적인 원인인
-            경우가 흔하므로, 원인 질환을 적절하게 치료하는 것이 중요합니다. 또한
-            급성 스트레스에 의해서도 발생할 수 있으므로 병력 청취를 통해
-            스트레스 원인을 정확하게 파악해야 합니다.
-          </p>
-
-          <h1>치료방법</h1>
-
-          <hr />
-          <p>
-            어지럼증은 인구 10명 중 1명이 겪고 있을 정도로 흔한 증상이며, 75세
-            이상의 노인들이 가장 흔하게 호소하는 증상 가운데 하나입니다. 그러나
-            어지럼증의 양상이나 원인 질환이 매우 다양하여 진단이나 치료가 어려운
-            경우가 많습니다.
-          </p>
-        </div> -->
-
-        <!-- <div class="lst">
-          <div class="disease_img">
-            <img src="image\노인_어지럼증.PNG" alt="노인 어지럼증" />
-          </div>
-          <div class="comment">
-            <h2>노인 어지럼증</h2>
-            <p>
-              어지럼증은 인구 10명 중 1명이 겪고 있을 정도로 흔한 증상이며, 75세
-              이상의 노인들이 가장 흔하게 호소하는 증상 가운데 하나입니다.
-              그러나 어지럼증의 양상이나 원인 질환이 매우 다양하여 진단이나
-              치료가 어려운 경우가 많습니다.
-            </p>
-            <button>자세히보기</button>
-          </div>
-        </div> -->
-        <div></div>
-      </div>
+      <div class="list"></div>
     </div>
 
     <div class="footer">
       <h1>about us</h1>
       <p>출처 표기 등 하자</p>
     </div>
+    <script
+      src="https://kit.fontawesome.com/bc4a4d4b9c.js"
+      crossorigin="anonymous"
+    ></script>
     <script type="text/javascript" src="wiki_main.js"></script>
+    <script>
+      function divBtn() {}
+    </script>
+
+    <script>
+      let isOpened = false;
+      menu_button.addEventListener("click", function (event) {
+        if (isOpened) {
+          menu.style.display = "none";
+          menu_button.style.right = "5%";
+          menu_icon.classList.replace("fa-xmark", "fa-bars");
+
+          isOpened = false;
+        } else {
+          menu.style.display = "block";
+          menu_icon.classList.replace("fa-bars", "fa-xmark");
+          menu_button.style.right = "28%";
+
+          isOpened = true;
+        }
+      });
+
+      window.addEventListener("resize", function handleScreenSizeChange() {
+        // Get the current screen width
+        var screenWidth = window.innerWidth;
+
+        // Check if the screen width is bigger than 800px
+        if (screenWidth >= 800) {
+          menu.style.display = "block";
+          menu_button.style.display = "none";
+          isOpened = false;
+
+          // Perform your desired actions here
+        } else {
+          menu_button.style.display = "block";
+          menu.style.display = "none";
+          if (isOpened) {
+            menu_button.style.right = "28%";
+          } else {
+            menu_button.style.right = "5%";
+          }
+          console.log("Screen size is not bigger than 800px");
+        }
+      });
+    </script>
   </body>
 </html>

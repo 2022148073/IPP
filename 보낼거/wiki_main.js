@@ -10,7 +10,41 @@ const name_search_button = document.getElementById("name_search_button");
 const name_search = document.getElementById("search");
 const disease_list = document.querySelector(".list");
 
+const menu = document.querySelector(".menu");
+const menu_button = document.getElementById("category");
+const menu_icon = document.querySelector("#category i");
+
 function initialize(total_disease_group) {
+  for (let i = 0; i < 15; i++) {
+    let categoryNumber = "category_" + (i + 1);
+    // console.log(categoryNumber);
+    let categoryListValue = document.getElementById(categoryNumber).innerHTML;
+    // console.log(categoryListValue);
+    console.log(document.getElementById(categoryNumber));
+    let categoryListValue_parent =
+      document.getElementById(categoryNumber).parentNode;
+    // console.log(categoryListValue_parent);
+    let subMenu = document.createElement("ul");
+
+    subMenu.className = "submenu";
+
+    for (let j = 0; j < total_disease_group.length; j++) {
+      if (total_disease_group[j].type === categoryListValue) {
+        // console.log(total_disease_group[i]);
+        let subMenuList = document.createElement("li");
+        let subMenuList_href = document.createElement("a");
+
+        subMenuList_href.href = "#";
+        subMenuList_href.innerHTML = total_disease_group[j].name;
+
+        subMenuList.appendChild(subMenuList_href);
+        subMenu.appendChild(subMenuList);
+      }
+    }
+
+    categoryListValue_parent.appendChild(subMenu);
+  }
+
   name_search_button.addEventListener("click", function () {
     name_disease_group = [];
     category_disease_group = [];
