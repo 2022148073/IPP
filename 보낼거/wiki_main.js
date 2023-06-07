@@ -17,20 +17,17 @@ const menu_icon = document.querySelector("#category i");
 function initialize(total_disease_group) {
   for (let i = 0; i < 15; i++) {
     let categoryNumber = "category_" + (i + 1);
-    // console.log(categoryNumber);
+    let categoryList = document.getElementById(categoryNumber);
     let categoryListValue = document.getElementById(categoryNumber).innerHTML;
-    // console.log(categoryListValue);
     console.log(document.getElementById(categoryNumber));
     let categoryListValue_parent =
       document.getElementById(categoryNumber).parentNode;
-    // console.log(categoryListValue_parent);
     let subMenu = document.createElement("ul");
 
     subMenu.className = "submenu";
 
     for (let j = 0; j < total_disease_group.length; j++) {
       if (total_disease_group[j].type === categoryListValue) {
-        // console.log(total_disease_group[i]);
         let subMenuList = document.createElement("li");
         let subMenuList_href = document.createElement("a");
 
@@ -39,10 +36,26 @@ function initialize(total_disease_group) {
 
         subMenuList.appendChild(subMenuList_href);
         subMenu.appendChild(subMenuList);
+
+        subMenuList.addEventListener("click", function () {
+          category_disease_group = [];
+          category_disease_group.push(total_disease_group[j]);
+          displayDetailByCategory();
+        });
       }
     }
 
     categoryListValue_parent.appendChild(subMenu);
+
+    categoryList.addEventListener("click", function () {
+      name_disease_group = [];
+      for (let k = 0; k < total_disease_group.length; k++) {
+        if (total_disease_group[k].type === categoryListValue) {
+          name_disease_group.push(total_disease_group[k]);
+        }
+      }
+      update_list();
+    });
   }
 
   name_search_button.addEventListener("click", function () {
@@ -71,7 +84,6 @@ function update_list() {
   }
 
   if (name_disease_group.length !== 0) {
-    console.log(name_disease_group);
     display();
   } else {
     var no_result = document.createElement("div");
@@ -143,6 +155,38 @@ function displayDetail(order) {
     name_disease_group[order].intro +
     "</p><h1>치료방법</h1><hr><p>" +
     name_disease_group[order].cure +
+    "</p>";
+
+  detailLeftAlign.innerHTML = detailExplain_1;
+  detailLeftAlign.appendChild(detailImageBox);
+  detailLeftAlign.innerHTML += detailExplain_2;
+  disease_list.appendChild(detailLeftAlign);
+}
+
+function displayDetailByCategory() {
+  while (disease_list.firstChild !== null) {
+    disease_list.removeChild(disease_list.firstChild);
+  }
+  // console.log(name_disease_group[order]);
+
+  const detailLeftAlign = document.createElement("div");
+  const detailImageBox = document.createElement("div");
+  const detailImage = document.createElement("img");
+
+  detailLeftAlign.className = "leftAlign";
+  detailImageBox.className = "detailImage";
+
+  detailImage.src = `image/${category_disease_group[0].image}`;
+  detailImage.alt = category_disease_group[0].name + " 사진";
+  detailImageBox.appendChild(detailImage);
+
+  var detailExplain_1 =
+    "<h1>개요: " + category_disease_group[0].name + "</h1><hr><br>";
+  var detailExplain_2 =
+    "<p>" +
+    category_disease_group[0].intro +
+    "</p><h1>치료방법</h1><hr><p>" +
+    category_disease_group[0].cure +
     "</p>";
 
   detailLeftAlign.innerHTML = detailExplain_1;

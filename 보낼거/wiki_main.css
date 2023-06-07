@@ -69,6 +69,7 @@ body {
   right: 0;
   overflow: hidden;
   position: fixed;
+  animation: animate__fadeInRight;
 }
 
 .menu > li {
@@ -104,6 +105,8 @@ body {
 }
 
 .menu > li:hover .submenu {
+  animation-name: animate__fadeInDown;
+  animation-duration: 0.5s;
   width: 100%;
   margin: 0%;
   height: fit-content;
@@ -111,6 +114,7 @@ body {
 }
 
 .menu .submenu li:hover {
+  transition-duration: 0.3s;
   background-color: #f5716a;
 }
 
@@ -254,7 +258,6 @@ a {
     display: block;
     position: static;
     width: 100%;
-
     height: auto;
   }
   ul.menu li {
@@ -280,8 +283,42 @@ a {
   .header {
     box-shadow: 0px 0px 2px 0px black;
   }
+  ul.menu {
+    animation-name: animate__fadeInRight;
+    animation-duration: 0.5s;
+  }
 
   ul .menu .li {
     max-height: fit-content;
+  }
+}
+
+@keyframes animate__fadeInRight {
+  from {
+    margin-right: -25%;
+    width: 25%;
+  }
+
+  to {
+    margin-left: 25%;
+    width: 25%;
+  }
+}
+
+@keyframes animate__fadeInDown {
+  0% {
+    opacity: 0%;
+    margin-top: -20%;
+    width: 100%;
+  }
+
+  70% {
+    opacity: 60%;
+  }
+
+  100% {
+    opacity: 100%;
+    margin-top: 0%;
+    width: 100%;
   }
 }
